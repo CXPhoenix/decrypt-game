@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#indexPage {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  background-image: url(./assets/encryption.jpg);
+  background-size: cover;
+  background-position: center center;
+}
