@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./src/assets/encrypt.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>密碼攔截戰 隨機取密碼</title>
+  </head>
+  <body>
+    <header class="bg-green-600 py-5 md:py-[3vw]">
+      <h1 class="text-center text-gray-100 text-4xl md:text-[5vw]">
+        密碼攔截戰<br class="block md:hidden" /><span class="hidden md:inline"
+          >&nbsp;</span
+        >隨機取密碼
+      </h1>
+    </header>
+    <section class="mt-4 mb-5 md:mt-[10vh]">
+      <div
+        class="
+          flex
+          justify-center
+          gap-x-10
+          md:flex-col md:items-center md:gap-y-[10vh]
+        "
+      >
+        <div class="flex flex-col gap-6 md:flex-row md:gap-20 md:gap-x-36">
+          <div class="">
+            <h3 class="text-center mt-2 mb-3 text-xl md:mb-[3vh] md:text-[2vw]">
+              1st
+            </h3>
+            <p
+              class="
+                randomNumber
+                border border-4 border-gray-900
+                px-3
+                py-4
+                text-center text-2xl
+                md:px-[4vw] md:py-[6vw] md:text-[6vw]
+              "
+            >
+              1
+            </p>
+          </div>
+          <div class="">
+            <h3 class="text-center mt-2 mb-3 text-xl md:mb-[3vh] md:text-[2vw]">
+              2nd
+            </h3>
+            <p
+              class="
+                randomNumber
+                border border-4 border-gray-900
+                px-3
+                py-4
+                text-center text-2xl
+                md:px-[4vw] md:py-[6vw] md:text-[6vw]
+              "
+            >
+              2
+            </p>
+          </div>
+          <div class="">
+            <h3 class="text-center mt-2 mb-3 text-xl md:mb-[3vh] md:text-[2vw]">
+              3rd
+            </h3>
+            <p
+              class="
+                randomNumber
+                border border-4 border-gray-900
+                px-3
+                py-4
+                text-center text-2xl
+                md:px-[4vw] md:py-[6vw] md:text-[6vw]
+              "
+            >
+              3
+            </p>
+          </div>
+        </div>
+        <div class="self-center md:grid md:w-8/12">
+          <button
+            id="getRandom"
+            class="
+              bg-green-800
+              rounded-xl
+              text-xl
+              px-3
+              py-16
+              text-gray-50
+              md:py-4 md:text-3xl
+            "
+          >
+            產生密碼
+          </button>
+        </div>
+      </div>
+    </section>
+    <script type="module" src="./src/random-machine.js"></script>
+  </body>
+</html>
