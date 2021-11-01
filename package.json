@@ -2,8 +2,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "cross-env TAILWIND_MODE=watch vite",
-    "build": "cross-env TAILWIND_MODE=build vite build",
-    "build:base": "cross-env TAILWIND_MODE=build vite build --base=./",
+    "build": "cross-env TAILWIND_MODE=build vite build --base=./",
+    "build:default": "cross-env TAILWIND_MODE=build vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
