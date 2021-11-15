@@ -13,7 +13,7 @@
         密碼攔截戰
       </h1>
     </header>
-    <section id="loginForm" class="hidden mt-6 mb-5 md:mt-[8vh]">
+    <section id="loginForm" class="mt-6 mb-5 md:mt-[8vh]">
       <form
         class="
           grid grid-cols-1
@@ -117,12 +117,12 @@
             gap-y-1
             md:flex-row md:gap-x-2 md:px-10
           "
-          for="userName"
+          for="newPwd"
         >
           <p class="text-lg md:text-[2vw]">新的密碼:</p>
           <input
-            id="userName"
-            type="text"
+            id="newPwd"
+            type="password"
             class="
               px-2
               py-1
@@ -140,11 +140,11 @@
             gap-y-1
             md:flex-row md:gap-x-2 md:px-10
           "
-          for="userPwd"
+          for="newPwdCheck"
         >
           <p class="text-lg md:text-[2vw]">確認密碼:</p>
           <input
-            id="userPwd"
+            id="newPwdCheck"
             type="password"
             class="
               px-2
@@ -169,7 +169,7 @@
         />
       </form>
     </section>
-    <section id="userUI" class="mt-6 mb-5 md:mt-[16vh]">
+    <section id="userUI" class="hidden mt-6 mb-5 md:mt-[16vh]">
       <div class="w-11/12 mx-auto py-6 bg-gray-100 shadow-lg">
         <table
           class="
