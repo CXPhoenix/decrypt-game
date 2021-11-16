@@ -1,0 +1,1 @@
+import"./index.1de03ae5.js";let r=document.querySelector("#getRandom"),d=document.querySelectorAll(".randomNumber");r.addEventListener("click",function(){let n=[];d.forEach(t=>{let e;do e=parseInt(Math.random()*4+1);while(n.indexOf(e)!==-1);n.push(e),t.innerText=e})});

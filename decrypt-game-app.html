@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./assets/encrypt.924eafed.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>密碼攔截戰</title>
+    <script type="module" crossorigin src="./assets/decrypt-game-app.7f82a68b.js"></script>
+    <link rel="modulepreload" href="./assets/index.1de03ae5.js">
+    <link rel="stylesheet" href="./assets/index.b7c0b9e1.css">
+  </head>
+
+  <body class="bg-gray-200">
+    <header class="mt-8 md:mt-[15vh]">
+      <h1 class="text-center text-4xl text-gray-800 md:text-[6vw]">
+        密碼攔截戰
+      </h1>
+    </header>
+    <section id="loginForm" class="mt-6 mb-5 md:mt-[8vh]">
+      <form
+        class="
+          grid grid-cols-1
+          items-center
+          justify-center
+          gap-y-6
+          mx-auto
+          py-5
+          px-2
+          w-4/5
+          bg-gray-100
+          border-[1px] border-gray-200
+          rounded-lg
+          shadow-lg
+          md:gap-y-10 md:py-12
+        "
+      >
+        <label
+          class="
+            flex flex-col
+            justify-center
+            items-center
+            gap-y-1
+            md:flex-row md:gap-x-2 md:px-10
+          "
+          for="userName"
+        >
+          <p class="text-lg md:text-[2vw]">組別帳號:</p>
+          <input
+            id="userName"
+            type="text"
+            class="
+              px-2
+              py-1
+              border border-[1px] border-gray-500
+              rounded-md
+              md:flex-grow md:text-[2vw]
+            "
+          />
+        </label>
+        <label
+          class="
+            flex flex-col
+            justify-center
+            items-center
+            gap-y-1
+            md:flex-row md:gap-x-2 md:px-10
+          "
+          for="userPwd"
+        >
+          <p class="text-lg md:text-[2vw]">組別密碼:</p>
+          <input
+            id="userPwd"
+            type="password"
+            class="
+              px-2
+              py-1
+              border border-[1px] border-gray-500
+              rounded-md
+              md:flex-grow md:text-[2vw]
+            "
+          />
+        </label>
+        <input
+          id="signin-submit"
+          type="submit"
+          class="
+            cursor-pointer
+            bg-green-700
+            rounded-xl
+            py-1
+            text-lg text-gray-100
+            md:w-1/2 md:mx-auto md:py-2 md:text-[2vw]
+          "
+          value="登入"
+        />
+      </form>
+    </section>
+    <section id="reset-pw" class="hidden mt-6 mb-5 md:mt-[8vh]">
+      <form
+        class="
+          grid grid-cols-1
+          items-center
+          justify-center
+          gap-y-6
+          mx-auto
+          py-5
+          px-2
+          w-4/5
+          bg-gray-100
+          border-[1px] border-gray-200
+          rounded-lg
+          shadow-lg
+          md:gap-y-10 md:py-12
+        "
+      >
+        <label
+          class="
+            flex flex-col
+            justify-center
+            items-center
+            gap-y-1
+            md:flex-row md:gap-x-2 md:px-10
+          "
+          for="newPwd"
+        >
+          <p class="text-lg md:text-[2vw]">新的密碼:</p>
+          <input
+            id="newPwd"
+            type="password"
+            class="
+              px-2
+              py-1
+              border border-[1px] border-gray-500
+              rounded-md
+              md:flex-grow md:text-[2vw]
+            "
+          />
+        </label>
+        <label
+          class="
+            flex flex-col
+            justify-center
+            items-center
+            gap-y-1
+            md:flex-row md:gap-x-2 md:px-10
+          "
+          for="newPwdCheck"
+        >
+          <p class="text-lg md:text-[2vw]">確認密碼:</p>
+          <input
+            id="newPwdCheck"
+            type="password"
+            class="
+              px-2
+              py-1
+              border border-[1px] border-gray-500
+              rounded-md
+              md:flex-grow md:text-[2vw]
+            "
+          />
+        </label>
+        <input
+          id="reset-password-submit"
+          type="submit"
+          class="
+            cursor-pointer
+            bg-green-700
+            rounded-xl
+            py-1
+            text-lg text-gray-100
+            md:w-1/2 md:mx-auto md:py-2 md:text-[2vw]
+          "
+          value="確認密碼重設"
+        />
+      </form>
+    </section>
+    <section id="userUI" class="hidden mt-6 mb-5 md:mt-[16vh]">
+      <div class="w-11/12 mx-auto py-6 bg-gray-100 shadow-lg">
+        <table
+          class="
+            mx-auto
+            table-fixed
+            border-collapse border-4 border-black
+            w-11/12
+            md:hidden
+          "
+        >
+          <thead>
+            <tr>
+              <th class="w-1/4 border-2 border-black text-2xl text-gray-800">
+                明碼描述
+              </th>
+              <th class="w-1/4 border-2 border-black text-2xl text-gray-800">
+                明碼
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr>
+              <td
+                class="
+                  decrypt-text-sm
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </td>
+              <td class="border-2 border-black text-xl text-gray-800">1</td>
+            </tr>
+            <tr>
+              <td
+                class="
+                  decrypt-text-sm
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </td>
+              <td class="border-2 border-black text-xl text-gray-800">2</td>
+            </tr>
+            <tr>
+              <td
+                class="
+                  decrypt-text-sm
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </td>
+              <td class="border-2 border-black text-xl text-gray-800">3</td>
+            </tr>
+            <tr>
+              <td
+                class="
+                  decrypt-text-sm
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </td>
+              <td class="border-2 border-black text-xl text-gray-800">4</td>
+            </tr>
+          </tbody>
+        </table>
+        <table
+          class="
+            hidden
+            mx-auto
+            table-fixed
+            border-collapse border-4 border-black
+            w-9/12
+            md:table
+          "
+        >
+          <thead>
+            <tr>
+              <th class="w-2/12 border-2 border-black text-xl text-gray-800">
+                明碼描述
+              </th>
+              <th
+                class="
+                  decrypt-text-md
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </th>
+              <th
+                class="
+                  decrypt-text-md
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </th>
+              <th
+                class="
+                  decrypt-text-md
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </th>
+              <th
+                class="
+                  decrypt-text-md
+                  border-2 border-black
+                  text-xl text-gray-800
+                "
+              >
+                明碼
+              </th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr>
+              <td class="border-2 border-black text-xl text-gray-800">明碼</td>
+              <td class="border-2 border-black text-xl text-gray-800">1</td>
+              <td class="border-2 border-black text-xl text-gray-800">2</td>
+              <td class="border-2 border-black text-xl text-gray-800">3</td>
+              <td class="border-2 border-black text-xl text-gray-800">4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="hidden mt-6 mb-5 md:mt-[16vh] text-center" id="loadingUI">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+    
+  </body>
+</html>
